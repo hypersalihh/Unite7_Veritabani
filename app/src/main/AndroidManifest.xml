@@ -15,48 +15,63 @@
         tools:targetApi="31">
         <activity
             android:name=".SiraSizde"
+            android:label="@string/s_ra_sizde"
             android:exported="false" />
         <activity
             android:name=".Uyg13Activity"
+            android:label="@string/uygulama_13"
             android:exported="false" />
         <activity
             android:name=".Uyg12Activity"
+            android:label="@string/uygulama_12"
             android:exported="false" />
         <activity
             android:name=".Uyg11Activity"
+            android:label="@string/uygulama_11"
             android:exported="false" />
         <activity
             android:name=".Uyg10Activity"
+            android:label="@string/uygulama_10"
             android:exported="false" />
         <activity
             android:name=".Uyg9Activity"
+            android:label="@string/uygulama_9"
             android:exported="false" />
         <activity
             android:name=".Uyg8Activity"
+            android:label="@string/uygulama_8"
             android:exported="false" />
         <activity
             android:name=".Uyg7Activity"
+            android:label="@string/uygulama_7"
             android:exported="false" />
         <activity
             android:name=".Uyg6Activity"
+            android:label="@string/uygulama_6"
             android:exported="false" />
         <activity
             android:name=".Uyg5Activity"
+            android:label="@string/uygulama_5"
             android:exported="false" />
         <activity
             android:name=".Uyg4Activity"
+            android:label="@string/uygulama_4"
             android:exported="false" />
         <activity
             android:name=".Uyg3Activity"
+            android:label="@string/uygulama_3"
             android:exported="false" />
         <activity
             android:name=".Uyg2Activity"
+            android:label="@string/uygulama_2"
             android:exported="false" />
         <activity
             android:name=".Uyg1Activity"
+            android:label="@string/uygulama_1"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:label="Ana Sayfa"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
