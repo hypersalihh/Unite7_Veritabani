@@ -18,9 +18,6 @@ public class Uyg2Activity extends AppCompatActivity {
         rdOpenTheme = findViewById(R.id.Uyg2AcikRd);
         rdDarkTheme = findViewById(R.id.Uyg2KapaliRd);
     }
-    public void degistir(String kim) {
-        if (kim == "acik")
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +35,6 @@ public class Uyg2Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == 2131230738) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    SharedPreferences sharedPreferences1 = this.
-                    degistir
                 }
                 else {
 
@@ -47,9 +42,4 @@ public class Uyg2Activity extends AppCompatActivity {
             }
         });
     }
-
-    /* AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                SharedPreferences data3 = this.getPreferences(Context.MODE_PRIVATE);
-                SharedPreferences.Editor edit2 = data3.edit();
-                edit2.putBoolean("theme",true); edit2.apply();*/
 }
