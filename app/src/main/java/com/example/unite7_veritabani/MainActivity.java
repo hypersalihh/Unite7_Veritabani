@@ -3,15 +3,23 @@ package com.example.unite7_veritabani;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        createDB();
+    }
+
+    private void createDB() {
+        database = this.openOrCreateDatabase("Urunler",MODE_PRIVATE,null);
+        database.execSQL("CREATE TABLE IF NOT EXISTS db (id INTEGER PRIMARY KEY, urunadi TEXT, fiyati DOUBLE, adet INTEGER)");
     }
 
     public void Uygulama10Click(View view) {
