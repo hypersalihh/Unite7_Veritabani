@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/acrivity_uyg3listview.xml" value="0.22" />
         <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/activity_sira_sizde.xml" value="0.2" />
         <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/activity_uyg1.xml" value="0.2" />
         <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/activity_uyg12.xml" value="0.2" />
         <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/activity_uyg2.xml" value="0.25" />
-        <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/activity_uyg3.xml" value="0.25" />
+        <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/activity_uyg3.xml" value="0.22" />
+        <entry key="..\:/Users/Ogrenci/AndroidStudioProjects/Unite7_Veritabani/app/src/main/res/layout/activity_uyg3_kayitve_duzenleme.xml" value="0.2" />
       </map>
     </option>
   </component>

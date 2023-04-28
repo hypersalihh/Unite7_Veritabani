@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,11 +16,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         createDB();
+        //insertDB();
+        //updateDB();
     }
 
     private void createDB() {
         database = this.openOrCreateDatabase("Urunler",MODE_PRIVATE,null);
         database.execSQL("CREATE TABLE IF NOT EXISTS db (id INTEGER PRIMARY KEY, urunadi TEXT, fiyati DOUBLE, adet INTEGER)");
+    }
+
+    private void insertDB() {
+        /*SQLiteStatement results = database.compileStatement("INSERT INTO db (urunadi,fiyati,adet) VALUES (?,?,?)");
+        results.bindString(1,"Ahmetne ekliyim");
+        results.bindDouble(2,1.5);
+        results.bindLong(3,1); results.execute();*/
+    }
+
+    private void updateDB() {
+        SQLiteStatement results = database.compileStatement("UPDATE db SET urunadi = ?, fiyati = ?, adet = ? WHERE id = ?");
+        results.bindString(1,"Ahmeth");
+        results.bindDouble(2,12.5);
+        results.bindLong(3,5);
+        results.bindLong(4,1);
+
     }
 
     public void Uygulama10Click(View view) {
