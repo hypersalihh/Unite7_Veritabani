@@ -42,7 +42,6 @@ public class Uyg3KayitveDuzenleme extends AppCompatActivity {
     }
 
     public void KaydetIslem(View view) {
-
         String Uadi = urunAdi.getText().toString();
         Double Ufiyat = Double.parseDouble(urunFiyati.getText().toString());
         Integer Uadet = Integer.parseInt(urunAdedi.getText().toString());
