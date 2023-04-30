@@ -37,8 +37,20 @@ public class Uyg3KayitveDuzenleme extends AppCompatActivity {
         String islems = i.getStringExtra("islem");
         if (islems.equals("duzenle")) {
             islem = true;
+            String urunadi = i.getStringExtra("urunadi");
+            Double urunfiyati = i.getDoubleExtra("urunfiyat",0);
+            Integer urunadeti = i.getIntExtra("urunadet",0);
+            urunAdi.setText(urunadi);
+            urunFiyati.setText(urunfiyati.toString());
+            urunAdedi.setText(urunadeti.toString());
+            urunAdi.setEnabled(false);
         }
         else islem = false;
+    }
+
+    public void btnBack(View view) {
+        Intent i = new Intent(Uyg3KayitveDuzenleme.this,Uyg3Activity.class);
+        startActivity(i);
     }
 
     public void KaydetIslem(View view) {
@@ -71,7 +83,12 @@ public class Uyg3KayitveDuzenleme extends AppCompatActivity {
         }
         else {
             try {
-
+                SQLiteStatement statement = database.compileStatement("UPDATE db SET fiyati = ?, adet = ? WHERE urunadi = ?");
+                statement.bindDouble(1,Ufiyat);
+                statement.bindLong(2,Uadet);
+                statement.bindString(3,Uadi);
+                statement.execute();
+                Toast.makeText(this, "Başarıyla " + Uadi + " isimli ürün güncellendi.", Toast.LENGTH_LONG).show();
             }
             catch (Exception e) {
                 Toast.makeText(this, "Hata oluştu. Hata Kodu: " + e, Toast.LENGTH_SHORT).show();

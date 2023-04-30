@@ -1,6 +1,10 @@
 package com.example.unite7_veritabani;
 
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -46,6 +51,17 @@ public class Uyg3ArrayAdapter extends BaseAdapter {
         Uadi.setText(urun.getUrunadi());
         Ufiyat.setText(String.format("%.02f",urun.getUrunfiyat()) + " TL");
         Uadet.setText(urun.getUrunmiktar() + "");
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,Uyg3KayitveDuzenleme.class);
+                i.putExtra("islem","duzenle");
+                i.putExtra("urunadi",urun.getUrunadi());
+                i.putExtra("urunfiyat",urun.getUrunfiyat());
+                i.putExtra("urunadet",urun.getUrunmiktar());
+                context.startActivity(i);
+            }
+        });
         return view;
     }
 }
