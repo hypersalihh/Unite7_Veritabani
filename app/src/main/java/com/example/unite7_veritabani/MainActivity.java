@@ -23,13 +23,15 @@ public class MainActivity extends AppCompatActivity {
     private void createDB() {
         database = this.openOrCreateDatabase("Urunler",MODE_PRIVATE,null);
         database.execSQL("CREATE TABLE IF NOT EXISTS db (id INTEGER PRIMARY KEY, urunadi TEXT, fiyati DOUBLE, adet INTEGER)");
+        System.out.println("geliyor.");
     }
 
     private void insertDB() {
-        /*SQLiteStatement results = database.compileStatement("INSERT INTO db (urunadi,fiyati,adet) VALUES (?,?,?)");
+        SQLiteStatement results = database.compileStatement("INSERT INTO db (urunadi,fiyati,adet) VALUES (?,?,?)");
         results.bindString(1,"Ahmetne ekliyim");
         results.bindDouble(2,1.5);
-        results.bindLong(3,1); results.execute();*/
+        results.bindLong(3,1);
+        results.execute();
     }
 
     private void updateDB() {

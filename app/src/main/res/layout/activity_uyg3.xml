@@ -21,6 +21,7 @@
         android:id="@+id/Uyg3EkleBtn"
         android:layout_width="149dp"
         android:layout_height="53dp"
+        android:onClick="EkleClick"
         android:text="Ekle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
