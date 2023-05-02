@@ -64,6 +64,7 @@ public class Uyg3KayitveDuzenleme extends AppCompatActivity {
                     do {
                         @SuppressLint("Range") String urunadi = cs.getString(cs.getColumnIndex("urunadi"));
                         if (urunadi.equals(Uadi)) {
+                            cs.close();
                             Toast.makeText(this, "Bu ürün adı zaten kullanılıyor.", Toast.LENGTH_SHORT).show();
                             return;
                         }
