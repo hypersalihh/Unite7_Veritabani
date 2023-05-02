@@ -29,19 +29,6 @@ public class Uyg3Activity extends AppCompatActivity {
         listW = findViewById(R.id.Uyg3ListView);
         database = this.openOrCreateDatabase("Urunler",MODE_PRIVATE,null);
         guncelle();
-        listW.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                makeText(Uyg3Activity.this, "Çalıştı", LENGTH_SHORT).show();
-                Uyg3Urunler secilenUrun = (Uyg3Urunler) parent.getItemAtPosition(position);
-                Intent i = new Intent(Uyg3Activity.this,Uyg3KayitveDuzenleme.class);
-                i.putExtra("islem","duzenle");
-                i.putExtra("urunadi",secilenUrun.getUrunadi());
-                i.putExtra("urunfiyat",secilenUrun.getUrunfiyat());
-                i.putExtra("urunadet",secilenUrun.getUrunmiktar());
-                startActivity(i);
-            }
-        });
     }
 
     @Override
