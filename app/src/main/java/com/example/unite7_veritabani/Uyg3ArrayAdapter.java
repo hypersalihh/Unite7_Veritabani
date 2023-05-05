@@ -56,6 +56,7 @@ public class Uyg3ArrayAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Intent i = new Intent(context,Uyg3KayitveDuzenleme.class);
                 i.putExtra("islem","duzenle");
+                i.putExtra("urunid",urun.getId());
                 i.putExtra("urunadi",urun.getUrunadi());
                 i.putExtra("urunfiyat",urun.getUrunfiyat());
                 i.putExtra("urunadet",urun.getUrunmiktar());

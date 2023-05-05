@@ -16,7 +16,7 @@
         android:layout_width="196dp"
         android:layout_height="107dp"
         android:layout_weight="1"
-        android:paddingTop="100px"
+        android:paddingTop="20px"
         android:orientation="vertical">
 
         <TextView
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
-            android:paddingTop="20px"
+            android:paddingTop="10px"
             android:text="urunFiyati"
             android:textColor="@color/red"
             android:textSize="15sp" />
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingTop="100px"
+        android:paddingTop="20px"
         android:text="999"
         android:textColor="@color/pink"
         android:textSize="21sp" />

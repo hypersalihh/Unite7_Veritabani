@@ -20,12 +20,15 @@ import java.sql.SQLException;
 
 public class Uyg3KayitveDuzenleme extends AppCompatActivity {
     EditText urunAdi, urunFiyati, urunAdedi;
+    Button kaydetbtn;
+    Integer islemid = null;
     public boolean islem = false;
     SQLiteDatabase database;
     private void init() {
         urunAdi = findViewById(R.id.urunAdiTxt);
         urunFiyati = findViewById(R.id.urunFiyatiTxt);
         urunAdedi = findViewById(R.id.urunAdediTxt);
+        kaydetbtn = findViewById(R.id.urunKaydetBtn);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +46,10 @@ public class Uyg3KayitveDuzenleme extends AppCompatActivity {
             urunAdi.setText(urunadi);
             urunFiyati.setText(urunfiyati.toString());
             urunAdedi.setText(urunadeti.toString());
-            urunAdi.setEnabled(false);
+            kaydetbtn.setText("Guncelle");
+            islemid = i.getIntExtra("urunid",0);
         }
-        else islem = false;
+        else { islem = false; kaydetbtn.setText("Kaydet"); }
     }
 
     public void btnBack(View view) {
@@ -84,10 +88,11 @@ public class Uyg3KayitveDuzenleme extends AppCompatActivity {
         }
         else {
             try {
-                SQLiteStatement statement = database.compileStatement("UPDATE db SET fiyati = ?, adet = ? WHERE urunadi = ?");
-                statement.bindDouble(1,Ufiyat);
-                statement.bindLong(2,Uadet);
-                statement.bindString(3,Uadi);
+                SQLiteStatement statement = database.compileStatement("UPDATE db SET urunadi = ?,fiyati = ?, adet = ? WHERE id = ?");
+                statement.bindString(1,Uadi);
+                statement.bindDouble(2,Ufiyat);
+                statement.bindLong(3,Uadet);
+                statement.bindLong(4,islemid);
                 statement.execute();
                 Toast.makeText(this, "Başarıyla " + Uadi + " isimli ürün güncellendi.", Toast.LENGTH_LONG).show();
             }
